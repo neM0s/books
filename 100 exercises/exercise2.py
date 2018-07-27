@@ -7,8 +7,10 @@ Then, the output should be:
 40320
 '''
 
-sum = 1
-for i in range(1,9):
-    sum = sum * i
 
-print sum
+def fact(x):
+    if x == 0:
+        return 1
+    return x * fact(x - 1)
+
+print(fact(8))

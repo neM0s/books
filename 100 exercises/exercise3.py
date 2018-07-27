@@ -4,10 +4,12 @@ Suppose the following input is supplied to the program:
 Then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}'''
 
-n = 8
-new_list = {}
+dict = dict()
+def dictionary(number):
+    if number == 0:
+        dict[1] = 1
+        return dict
+    dict[number] = number * number
+    return dictionary(number-1)
 
-for i in range(1, n+1):
-    new_list. {i: i*i}
-
-print new_list
+print(dictionary(8))
